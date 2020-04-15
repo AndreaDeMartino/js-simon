@@ -26,9 +26,9 @@ function randomNumbers(array){
 var userNumbers = [];
 var foundNumbers = [];
 
-setTimeout(function() { randomBox.style.display = 'none';},4000);
+setTimeout(function() { randomBox.style.display = 'none';},29500);
 
-setTimeout(game, 5000);
+setTimeout(game, 30000);
 
 function game (){
   var choice = 0;
