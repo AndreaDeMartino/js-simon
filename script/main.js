@@ -1,8 +1,12 @@
 // Random numbers
 var numbers = randomNumbers(numbers);
+var showRandom = document.getElementById('random');
+var randomBox = document.getElementById('random-box');
+var found = document.getElementById('trovati');
+var foundBox = document.getElementById('trovati-box');
 
 console.log('Numeri generati random',numbers);
-alert('Ricorda questi numeri: ' + numbers)
+showRandom.innerHTML = numbers
 
 function randomNumbers(array){
   array = [];
@@ -21,6 +25,8 @@ function randomNumbers(array){
 // Game
 var userNumbers = [];
 var foundNumbers = [];
+
+setTimeout(function() { randomBox.style.display = 'none';},4000);
 
 setTimeout(game, 5000);
 
@@ -41,6 +47,15 @@ function game (){
   console.log('***   LISTA NUMERI INDOVINATI  ***',foundNumbers);
   console.log('**********************************');
   
+    
+  document.getElementById('qt-trovati').innerHTML = foundNumbers.length;
+  if (foundNumbers.length !== 0){
+    found.innerHTML = foundNumbers;
+  } else{
+    found.innerHTML = 'Vuoto';
+  }
+  
+  foundBox.style.display = 'block';
   return
 }
 
